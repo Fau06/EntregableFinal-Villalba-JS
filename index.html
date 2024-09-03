@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agregar Stock</title>
+    </head>
+<body>
+
+<main>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Administrar Stock</h1>
+        
+        <div id="productos" class="list-group"></div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="nombreProducto" placeholder="Nombre del producto">
+                <input type="number" class="form-control" id="precioProducto" placeholder="Precio">
+                <button class="btn btn-primary" id="agregarProducto">Agregar</button>
+            </div>
+
+                <button class="btn btn-danger" id="vaciarCarrito">Vaciar Lista</button>
+            </div>
+        </div>
+    </div>
+    <div id="totalStock"></div>
+</main>
+
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+
+</body>
+</html>
