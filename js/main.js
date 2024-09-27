@@ -1,3 +1,9 @@
+import React, { useState, useEffect } from 'react';
+
+function App() {
+  const [productos, setProductos] = useState([]);
+  const [total, setTotal] = useState(0);
+
 // Obtener referencias a los elementos del DOM
 const productosDiv = document.getElementById('productos');
 const nombreProductoInput = document.getElementById('nombreProducto');
@@ -46,3 +52,21 @@ if (carritoGuardado) {
         productosDiv.appendChild(nuevoProducto);
     });
 }
+
+useEffect(() => {
+    // Calcular el total cada vez que cambie la lista de productos
+    const nuevoTotal = productos.reduce((acc, producto) => acc + producto.precio, 0);
+    setTotal(nuevoTotal);
+  }, [productos]);
+
+  return (
+    <div>
+      {/* ... */}
+      {productos.length > 0 && (
+        <p>Total: {numeral(total).format('$0,0.00')}</p>
+      )}
+    </div>
+  );
+}
+
+export default App;
